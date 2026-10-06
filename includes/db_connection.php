@@ -1,9 +1,9 @@
 <?php
-$host = getenv('MYSQLHOST') ?: 'localhost';
-$db   = getenv('MYSQLDATABASE') ?: 'barbearia';
-$user = getenv('MYSQLUSER') ?: 'root';
-$pass = getenv('MYSQLPASSWORD') ?: '';
-$port = getenv('MYSQLPORT') ?: '3306';
+$host = getenv('MYSQLHOST') ?: (getenv('MYSQL_HOST') ?: 'localhost');
+$db   = getenv('MYSQLDATABASE') ?: (getenv('MYSQL_DATABASE') ?: 'barbearia');
+$user = getenv('MYSQLUSER') ?: (getenv('MYSQL_USER') ?: 'root');
+$pass = getenv('MYSQLPASSWORD') ?: (getenv('MYSQL_PASSWORD') ?: '');
+$port = getenv('MYSQLPORT') ?: (getenv('MYSQL_PORT') ?: '3306');
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
@@ -18,6 +18,6 @@ try {
 } catch (\PDOException $e) {
      // Em produção, não exibiria o erro detalhado
      // throw new \PDOException($e->getMessage(), (int)$e->getCode());
-     die("Erro ao conectar com o banco de dados. Certifique-se de que o banco '$db' existe.");
+     die("Erro ao conectar com o banco de dados ($db): " . $e->getMessage() . " | Host=$host | Port=$port | User=$user");
 }
 ?>
