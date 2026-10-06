@@ -1,0 +1,75 @@
+CREATE TABLE IF NOT EXISTS `cliente` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT,
+	`id_usuario` INTEGER NOT NULL,
+	`nome` VARCHAR(255) NOT NULL,
+	`telefone_contato` VARCHAR(255),
+	`email` VARCHAR(255),
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE IF NOT EXISTS `barbeiro` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(255) NOT NULL,
+	`especialidade` VARCHAR(255) NOT NULL,
+	`telefone` VARCHAR(255) NOT NULL,
+	`email` VARCHAR(255) NOT NULL,
+	`instagram` VARCHAR(255),
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE IF NOT EXISTS `agendamento` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT,
+	`data` DATETIME NOT NULL,
+	`id_cliente` INTEGER NOT NULL,
+	`id_barbeiro` INTEGER NOT NULL,
+	`id_servico` INTEGER NOT NULL,
+	`status` INTEGER NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE IF NOT EXISTS `servico` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(255) NOT NULL,
+	`descricao` VARCHAR(255) NOT NULL,
+	`valor` INTEGER NOT NULL,
+	`duracao` INTEGER NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT,
+	`username` VARCHAR(255) NOT NULL UNIQUE,
+	`senha` VARCHAR(255) NOT NULL,
+	`perfil` INTEGER NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+ALTER TABLE `cliente`
+ADD FOREIGN KEY(`id_usuario`) REFERENCES `usuario`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `agendamento`
+ADD FOREIGN KEY(`id_cliente`) REFERENCES `cliente`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `agendamento`
+ADD FOREIGN KEY(`id_barbeiro`) REFERENCES `barbeiro`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `agendamento`
+ADD FOREIGN KEY(`id_servico`) REFERENCES `servico`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+CREATE TABLE IF NOT EXISTS `produto` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `nome` VARCHAR(255) NOT NULL,
+    `descricao` TEXT,
+    `preco` DECIMAL(10,2) NOT NULL,
+    `desconto` DECIMAL(10,2) DEFAULT 0,
+    `foto` VARCHAR(255),
+    `id_barbeiro` INTEGER NOT NULL,
+    PRIMARY KEY(`id`),
+    FOREIGN KEY(`id_barbeiro`) REFERENCES `barbeiro`(`id`)
+);

@@ -1,0 +1,14 @@
+{
+    "name": "slimshadydubois/barbearia",
+    "description": "Barbearia Management System",
+    "require": {
+        "twilio/sdk": "8.0",
+        "google/apiclient": "^2.19"
+    },
+    "authors": [
+        {
+            "name": "bundinha lisa",
+            "email": "henriquecamposduarte21@gmail.com"
+        }
+    ]
+}

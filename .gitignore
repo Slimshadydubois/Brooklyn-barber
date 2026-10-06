@@ -1,0 +1,8 @@
+/vendor/
+/node_modules/
+/.env
+/setup_db.php
+/includes/token.json
+/includes/credentials.json
+/teste_sms.php
+/teste_whatsapp.php
