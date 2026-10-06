@@ -2,6 +2,8 @@
     "name": "slimshadydubois/barbearia",
     "description": "Barbearia Management System",
     "require": {
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
         "twilio/sdk": "8.0",
         "google/apiclient": "^2.19"
     },
