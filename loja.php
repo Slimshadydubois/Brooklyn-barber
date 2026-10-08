@@ -273,7 +273,7 @@ try {
 
     </div>
         <footer style="position: relative; overflow: hidden; margin-top: auto;">
-        <img src="assets/img/barbeadormonstro.png" alt="Barbeador Monstro" style="position: absolute; left: 10px; bottom: 10px; height: 100px; opacity: 0.15; pointer-events: none; z-index: 0;">
+        <img src="assets/img/barbeadormonstro.png" alt="Barbeador Monstro" style="position: absolute; left: 10px; bottom: 10px; height: 100px; opacity: 0.8; pointer-events: none; z-index: 0;">
         <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 2;">
             <div style="text-align: left;">
                 <div style="margin-bottom: 0.5rem;">

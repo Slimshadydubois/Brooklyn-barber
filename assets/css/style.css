@@ -159,7 +159,7 @@ nav::after {
     margin-top: 0 !important;
     padding: 0.5rem 1.5rem !important;
     font-size: 0.9rem !important;
-    font-family: 'Brooklyn Kid', cursive;
+    font-family: 'SandeyMolse', serif;
 }
 
 .user-greeting {
@@ -173,7 +173,7 @@ nav::after {
 
 .login-btn {
     font-size: 0.9rem;
-    font-family: 'Brooklyn Kid', cursive;
+    font-family: 'SandeyMolse', serif;
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #ffffff;
