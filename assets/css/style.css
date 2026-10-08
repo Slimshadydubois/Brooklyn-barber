@@ -137,9 +137,9 @@ nav::after {
 .nav-links a {
     text-decoration: none;
     color: #ffffff;
-    font-family: 'SandeyMolse', serif;
+    font-family: 'Brooklyn Kid', cursive;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition);
@@ -165,7 +165,7 @@ nav::after {
 .user-greeting {
     font-size: 1rem;
     font-weight: 500;
-    font-family: 'SandeyMolse', serif;
+    font-family: 'Brooklyn Kid', cursive;
     color: #ffffff;
     letter-spacing: 1px;
     align-self: center;
