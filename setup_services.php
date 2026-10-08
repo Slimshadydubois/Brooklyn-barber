@@ -9,7 +9,7 @@ $servicos = [
     ['Corte e barba', 55],
     ['Navalhado e barba', 60],
     ['Sobrancelha', 10],
-    ['Acabamento', 20],
+    ['Acabamento', 15],
     ['Pigmentação', 15],
     ['Química ap.', 150]
 ];

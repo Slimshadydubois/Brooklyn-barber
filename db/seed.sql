@@ -6,6 +6,6 @@ INSERT INTO `servico` (`nome`, `descricao`, `valor`, `duracao`) VALUES
 ('Corte e barba', 'Combo de corte e barba', 55, 60),
 ('Navalhado e barba', 'Combo de corte navalhado e barba', 60, 75),
 ('Sobrancelha', 'Serviço de sobrancelha', 10, 15),
-('Acabamento', 'Acabamento', 0, 15),
+('Acabamento', 'Acabamento', 15, 15),
 ('Pigmentação', 'Serviço de pigmentação', 15, 30),
 ('Química ap.', 'Aplicação de química', 150, 90);
