@@ -5,7 +5,7 @@
     --secondary-color: #d32f2f; /* Vermelho */
     --text-primary: #e8e6e3;
     --text-secondary: #b0aba5;
-    --nav-bg: rgba(0, 0, 0, 0.85);
+    --nav-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/fundpheader.jpg') center/cover;
     --transition: all 0.3s ease;
 }
 
