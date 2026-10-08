@@ -128,7 +128,7 @@ try {
                 </div>
             </div>
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Interior da Barbearia">
+                <img src="assets/img/conhecanossababearia.png" alt="Interior da Barbearia">
             </div>
         </div>
     </section>
