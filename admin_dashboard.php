@@ -216,3 +216,4 @@ $todos_barbeiros = $stmtBarb->fetchAll();
     </script>
 </body>
 </html>
+

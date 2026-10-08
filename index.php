@@ -60,9 +60,7 @@ try {
                     <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 1): ?>
                         <a href="admin_dashboard.php" class="login-btn" style="border-color: #e67e22; color: #e67e22; margin-right: 0.5rem;">Painel Admin</a>
                     <?php endif; ?>
-                    <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 3): ?>
-                        <a href="barbeiro_dashboard.php" class="login-btn" style="border-color: var(--primary-color); color: var(--primary-color); margin-right: 0.5rem;">Painel do Barbeiro</a>
-                    <?php endif; ?>
+                    
                     <span class="user-greeting">Olá, <?php echo htmlspecialchars($_SESSION['usuario_nome'] ?? $_SESSION['usuario_username']); ?></span>
                     <a href="logout.php" class="login-btn">Sair</a>
                 <?php else: ?>
@@ -218,4 +216,5 @@ try {
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
 
