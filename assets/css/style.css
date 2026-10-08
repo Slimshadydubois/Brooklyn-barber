@@ -143,11 +143,26 @@ nav::after {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition);
+    position: relative;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
     color: #a10000; /* Vermelho escuro */
+}
+
+.nav-links a.active {
+    color: #ffffff;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 12px;
+    background: url('../img/linha.png') no-repeat center center;
+    background-size: contain;
 }
 
 .nav-btns {
