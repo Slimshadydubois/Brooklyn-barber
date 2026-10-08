@@ -84,11 +84,34 @@ try {
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center;">
-        <div class="hero-content">
-            <h1>Estilo Atemporal</h1>
-            <p>Mais que um corte, uma experiência de cavalheiro. Venha conhecer a nossa essência onde a tradição se encontra com o estilo moderno.</p>
-            <a href="agendamento.php" class="btn-primary">Aba para Realizar Agendamento</a>
+    <section class="hero" id="home">
+        <div class="slide active" style="background-image: url('assets/img/cabeloafro.png');">
+            <div class="hero-content">
+                <h1>Especialidade em Cabelos Afro</h1>
+                <p>Técnicas especializadas e cuidados precisos para valorizar a sua identidade e o seu estilo.</p>
+                <a href="agendamento.php" class="btn-primary">Realizar Agendamento</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/img/cabeloafro2.png');">
+            <div class="hero-content">
+                <h1>A Arte do Degradê</h1>
+                <p>Domínio completo de química capilar, pigmentação e cortes com acabamento impecável.</p>
+                <a href="agendamento.php" class="btn-primary">Realizar Agendamento</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/img/cabeloafro3.png');">
+            <div class="hero-content">
+                <h1>Estilo e Atitude</h1>
+                <p>Nossos profissionais entendem o seu cabelo e garantem o melhor resultado para o seu visual.</p>
+                <a href="agendamento.php" class="btn-primary">Realizar Agendamento</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <div class="hero-content">
+                <h1>Estilo Atemporal</h1>
+                <p>Mais que um corte, uma experiência de cavalheiro. Venha conhecer a nossa essência onde a tradição se encontra com o estilo moderno.</p>
+                <a href="agendamento.php" class="btn-primary">Realizar Agendamento</a>
+            </div>
         </div>
     </section>
 
