@@ -197,8 +197,9 @@ try {
     </section>
 
     <!-- Footer -->
-        <footer>
-        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1.5rem;">
+        <footer style="position: relative; overflow: hidden;">
+        <img src="assets/img/tesoura%20monstro.png" alt="Tesoura Monstro" style="position: absolute; right: 10px; bottom: 10px; height: 80px; opacity: 0.2; pointer-events: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 2;">
             <div style="text-align: left;">
                 <div style="margin-bottom: 0.5rem;">
                     <a href="loja.php" style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: bold;">Loja de Produtos</a>

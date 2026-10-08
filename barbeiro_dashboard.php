@@ -316,6 +316,8 @@ $dias_labels_json = json_encode(['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb
     <link rel="stylesheet" href="assets/css/dashboard.css?v=<?php echo time(); ?>">
 </head>
 <body>
+    <!-- Imagem de decoração no canto inferior direito -->
+    <img src="assets/img/barbeadormaluco.png" alt="Barbeador Maluco" style="position: fixed; right: 20px; bottom: 20px; height: 120px; opacity: 0.15; pointer-events: none; z-index: 0;">
 
     <!-- Navbar -->
     <nav>

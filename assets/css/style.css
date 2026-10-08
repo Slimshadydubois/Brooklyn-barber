@@ -113,6 +113,13 @@ nav::after {
     font-weight: 700;
     text-decoration: none;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    height: 40px;
+    width: auto;
 }
 
 .nav-content {

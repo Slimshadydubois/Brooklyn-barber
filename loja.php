@@ -179,7 +179,8 @@ try {
         }
     </style>
 </head>
-<body>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div style="flex: 1;">
     <nav>
         <div class="brand">Brooklyn<span>.</span></div>
         <div class="nav-links">
@@ -270,8 +271,10 @@ try {
         </div>
     </div>
 
-        <footer>
-        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1.5rem;">
+    </div>
+        <footer style="position: relative; overflow: hidden; margin-top: auto;">
+        <img src="assets/img/barbeadormonstro.png" alt="Barbeador Monstro" style="position: absolute; left: 10px; bottom: 10px; height: 100px; opacity: 0.15; pointer-events: none; z-index: 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 2;">
             <div style="text-align: left;">
                 <div style="margin-bottom: 0.5rem;">
                     <a href="loja.php" style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: bold;">Loja de Produtos</a>
