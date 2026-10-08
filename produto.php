@@ -188,7 +188,7 @@ $preco_final = $produto['preco'] - $produto['desconto'];
 </head>
 <body>
     <nav>
-        <div class="brand">Brooklyn<span>.</span></div>
+        <a href="index.php" class="brand"><img src="assets/img/logobarbearia.png" alt="Brooklyn Barbershop" style="height: 40px; margin-top: 5px;"></a>
         <div class="nav-links">
             <a href="index.php">Início</a>
             <a href="agendamento.php">Agendar</a>

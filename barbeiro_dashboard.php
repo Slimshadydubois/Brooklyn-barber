@@ -184,15 +184,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         try {
-            $stmt = $pdo->prepare("UPDATE produto SET nome=:n, descricao=:d, preco=:p, desconto=:desc, foto=:f WHERE id=:id AND id_barbeiro=:id_b");
-            $stmt->execute(['n' => $nome, 'd' => $descricao, 'p' => $preco, 'desc' => $desconto, 'f' => $foto_path, 'id' => $id_prod, 'id_b' => $barbeiro_id]);
+            $stmt = $pdo->prepare("UPDATE produto SET nome=:n, descricao=:d, preco=:p, desconto=:desc, foto=:f WHERE id=:id");
+            $stmt->execute(['n' => $nome, 'd' => $descricao, 'p' => $preco, 'desc' => $desconto, 'f' => $foto_path, 'id' => $id_prod]);
             $success = 'Produto atualizado com sucesso!';
         } catch(Exception $e) { $error = 'Erro: '.$e->getMessage(); }
     } elseif ($action === 'delete_produto') {
         $id_prod = intval($_POST['id_produto'] ?? 0);
         try {
-            $stmt = $pdo->prepare("DELETE FROM produto WHERE id = :id AND id_barbeiro = :id_b");
-            $stmt->execute(['id' => $id_prod, 'id_b' => $barbeiro_id]);
+            $stmt = $pdo->prepare("DELETE FROM produto WHERE id = :id");
+            $stmt->execute(['id' => $id_prod]);
             $success = 'Produto excluído!';
         } catch (Exception $e) { $error = 'Erro: '.$e->getMessage(); }
     }
@@ -200,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Carrega os cortes cadastrados pelo barbeiro
 try {
-    $stmt = $pdo->prepare("SELECT * FROM servico WHERE id_barbeiro = :id_barbeiro ORDER BY nome ASC");
+    $stmt = $pdo->prepare("SELECT * FROM servico WHERE id_barbeiro = :id_barbeiro OR id_barbeiro IS NULL ORDER BY nome ASC");
     $stmt->execute(['id_barbeiro' => $barbeiro_id]);
     $servicos = $stmt->fetchAll();
 } catch (Exception $e) {
@@ -244,7 +244,7 @@ try {
 
 // Carrega os produtos do barbeiro
 try {
-    $stmtProd = $pdo->prepare("SELECT * FROM produto WHERE id_barbeiro = :id_b ORDER BY id DESC");
+    $stmtProd = $pdo->prepare("SELECT * FROM produto ORDER BY id DESC");
     $stmtProd->execute(['id_b' => $barbeiro_id]);
     $produtos_barbeiro = $stmtProd->fetchAll();
 } catch (Exception $e) {
@@ -455,6 +455,9 @@ $dias_labels_json = json_encode(['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb
                                             </td>
                                             <td style="text-align: right;">
                                                 <div class="service-actions" style="justify-content: flex-end;">
+                                                    <?php if (is_null($servico['id_barbeiro'])): ?>
+                                                        <span style="font-size: 0.8rem; background: #333; padding: 4px 8px; border-radius: 4px; color: #fff;">Padrão Geral</span>
+                                                    <?php else: ?>
                                                     <button class="btn-icon btn-icon-edit" title="Editar" 
                                                         onclick="editService(
                                                             <?php echo $servico['id']; ?>, 
@@ -476,6 +479,7 @@ $dias_labels_json = json_encode(['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb
                                                             </svg>
                                                         </button>
                                                     </form>
+                                                    <?php endif; ?>
                                                 </div>
                                             </td>
                                         </tr>

@@ -104,7 +104,7 @@ try {
                 <a href="agendamento.php" class="btn-primary">Realizar Agendamento</a>
             </div>
         </div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="slide" style="background-image: url('assets/img/conhecanossababearia.png');">
             <div class="hero-content">
                 <h1>Estilo Atemporal</h1>
                 <p>Mais que um corte, uma experiência de cavalheiro. Venha conhecer a nossa essência onde a tradição se encontra com o estilo moderno.</p>

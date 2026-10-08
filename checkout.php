@@ -49,7 +49,7 @@
 </head>
 <body>
     <nav>
-        <div class="brand">Brooklyn<span>.</span></div>
+        <a href="index.php" class="brand"><img src="assets/img/logobarbearia.png" alt="Brooklyn Barbershop" style="height: 40px; margin-top: 5px;"></a>
         <div class="nav-links">
             <a href="loja.php">&larr; Voltar para Loja</a>
         </div>
