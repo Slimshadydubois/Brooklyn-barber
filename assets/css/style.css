@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Brooklyn Kid';
+    src: url('../fonts/brooklyn_kid.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --bg-color: rgba(24, 26, 27, 1);
     --card-bg: #222222;
@@ -123,8 +130,9 @@ nav::after {
 .nav-links a {
     text-decoration: none;
     color: #ffffff;
+    font-family: 'Brooklyn Kid', cursive;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition);
@@ -143,19 +151,22 @@ nav::after {
 .btn-nav {
     margin-top: 0 !important;
     padding: 0.5rem 1.5rem !important;
-    font-size: 0.8rem !important;
+    font-size: 0.9rem !important;
+    font-family: 'Brooklyn Kid', cursive;
 }
 
 .user-greeting {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 500;
+    font-family: 'Brooklyn Kid', cursive;
     color: #ffffff;
     letter-spacing: 1px;
     align-self: center;
 }
 
 .login-btn {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-family: 'Brooklyn Kid', cursive;
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #ffffff;
