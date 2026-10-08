@@ -12,7 +12,7 @@
     --secondary-color: #d32f2f; /* Vermelho */
     --text-primary: #e8e6e3;
     --text-secondary: #b0aba5;
-    --nav-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/fundpheader.jpg') center/cover;
+    --nav-bg: url('../img/fundpheader.jpg') center/cover;
     --transition: all 0.3s ease;
 }
 
@@ -118,7 +118,7 @@ nav::after {
 }
 
 .brand img {
-    height: 70px;
+    height: 120px;
     width: auto;
 }
 
@@ -529,7 +529,7 @@ footer {
 
 
 .brand img {
-    max-height: 100px;
+    max-height: 150px;
     width: auto;
 }
 .logo img {

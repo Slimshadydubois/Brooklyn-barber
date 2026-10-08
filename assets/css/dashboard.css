@@ -1,29 +1,23 @@
 :root {
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
-    --card-bg-glass: rgba(30, 30, 30, 0.9);
-    --primary-color: #C5A059;
-    --primary-hover: #d4af37;
-    --text-primary: #FFFFFF;
-    --text-secondary: #BDBDBD;
-    --border-color: rgba(197, 160, 89, 0.2);
+    --card-bg-glass: rgba(34, 34, 34, 0.9);
+    --primary-hover: #1565c0;
+    --border-color: rgba(25, 118, 210, 0.2);
     --error-color: #e74c3c;
     --success-color: #2ecc71;
-    --transition: all 0.3s ease;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: 'Montserrat', sans-serif;
-    padding-top: 100px; /* Space for navbar */
+    padding-top: 165px; /* Space for navbar */
     min-height: 100vh;
 }
 
 .dashboard-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 120px 5% 2rem;
+    padding: 2rem 5% 2rem;
 }
 
 .dashboard-header {

@@ -317,7 +317,7 @@ $dias_labels_json = json_encode(['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb
 </head>
 <body>
     <!-- Imagem de decoração no canto inferior direito -->
-    <img src="assets/img/barbeadormaluco.png" alt="Barbeador Maluco" style="position: fixed; right: 20px; bottom: 20px; height: 120px; opacity: 0.8; pointer-events: none; z-index: 0;">
+    <img src="assets/img/barbeadormaluco.png" alt="Barbeador Maluco" style="position: fixed; right: 20px; bottom: 20px; height: 150px; filter: brightness(1.2); pointer-events: none; z-index: 0;">
 
     <!-- Navbar -->
     <nav>
@@ -334,11 +334,26 @@ $dias_labels_json = json_encode(['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb
             <ul class="nav-links">
                 <li><a href="index.php">Início</a></li>
                 <li><a href="loja.php">Loja</a></li>
-                <li><a href="barbeiro_dashboard.php">Painel do Barbeiro</a></li>
+                <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 3): ?>
+                    <li><a href="barbeiro_dashboard.php">Painel do Barbeiro</a></li>
+                <?php else: ?>
+                    <li><a href="agendamento.php">Meus Agendamentos</a></li>
+                <?php endif; ?>
             </ul>
             <div class="nav-btns">
-                <span class="user-greeting">Olá, <?php echo htmlspecialchars($barbeiro_nome); ?></span>
-                <a href="logout.php" class="login-btn">Sair</a>
+                <a href="agendamento.php" class="btn-primary btn-nav">Agendar</a>
+                <?php if (isset($_SESSION['usuario_id'])): ?>
+                    <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 1): ?>
+                        <a href="admin_dashboard.php" class="login-btn" style="border-color: #e67e22; color: #e67e22; margin-right: 0.5rem;">Painel Admin</a>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 3): ?>
+                        <a href="barbeiro_dashboard.php" class="login-btn" style="border-color: var(--primary-color); color: var(--primary-color); margin-right: 0.5rem;">Painel do Barbeiro</a>
+                    <?php endif; ?>
+                    <span class="user-greeting">Olá, <?php echo htmlspecialchars($_SESSION['usuario_nome'] ?? $_SESSION['usuario_username']); ?></span>
+                    <a href="logout.php" class="login-btn">Sair</a>
+                <?php else: ?>
+                    <a href="login.php" class="login-btn">Login</a>
+                <?php endif; ?>
             </div>
             <div class="social-icons" style="display: flex; gap: 1.5rem; margin-left: 2rem; align-items: center;">
                 <a href="https://www.instagram.com/bbsbrooklyn/?hl=pt-br" target="_blank" style="color: #ffffff; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#1976d2'" onmouseout="this.style.color='#ffffff'">

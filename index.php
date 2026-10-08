@@ -198,7 +198,7 @@ try {
 
     <!-- Footer -->
         <footer style="position: relative; overflow: hidden;">
-        <img src="assets/img/tesoura%20monstro.png" alt="Tesoura Monstro" style="position: absolute; right: 10px; bottom: 10px; height: 80px; opacity: 0.8; pointer-events: none;">
+        <img src="assets/img/tesoura%20monstro.png" alt="Tesoura Monstro" style="position: absolute; right: 10px; bottom: 10px; height: 120px; filter: brightness(1.2); pointer-events: none;">
         <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 2;">
             <div style="text-align: left;">
                 <div style="margin-bottom: 0.5rem;">
