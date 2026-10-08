@@ -12,7 +12,7 @@
     --secondary-color: #d32f2f; /* Vermelho */
     --text-primary: #e8e6e3;
     --text-secondary: #b0aba5;
-    --nav-bg: url('../img/fundpheader.jpg') center/cover;
+    --nav-bg: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/fundpheader.jpg') center/cover;
     --transition: all 0.3s ease;
 }
 
@@ -118,7 +118,7 @@ nav::after {
 }
 
 .brand img {
-    height: 180px;
+    height: 130px;
     width: auto;
 }
 
@@ -145,8 +145,9 @@ nav::after {
     transition: var(--transition);
 }
 
-.nav-links a:hover {
-    color: #bbdefb;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a10000; /* Vermelho escuro */
 }
 
 .nav-btns {

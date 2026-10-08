@@ -194,7 +194,7 @@ try {
         <div class="nav-content" id="navContent">
             <ul class="nav-links">
                 <li><a href="index.php">Início</a></li>
-                <li><a href="loja.php" style="color: var(--primary-color);">Loja</a></li>
+                <li><a href="loja.php" class="active">Loja</a></li>
                 <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 3): ?>
                     <li><a href="barbeiro_dashboard.php">Painel do Barbeiro</a></li>
                 <?php else: ?>

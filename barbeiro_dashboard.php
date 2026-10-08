@@ -335,7 +335,7 @@ $dias_labels_json = json_encode(['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb
                 <li><a href="index.php">Início</a></li>
                 <li><a href="loja.php">Loja</a></li>
                 <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 3): ?>
-                    <li><a href="barbeiro_dashboard.php">Painel do Barbeiro</a></li>
+                    <li><a href="barbeiro_dashboard.php" class="active">Painel do Barbeiro</a></li>
                 <?php else: ?>
                     <li><a href="agendamento.php">Meus Agendamentos</a></li>
                 <?php endif; ?>

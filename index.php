@@ -46,7 +46,7 @@ try {
         
         <div class="nav-content" id="navContent">
             <ul class="nav-links">
-                <li><a href="index.php">Início</a></li>
+                <li><a href="index.php" class="active">Início</a></li>
                 <li><a href="loja.php">Loja</a></li>
                 <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 3): ?>
                     <li><a href="barbeiro_dashboard.php">Painel do Barbeiro</a></li>

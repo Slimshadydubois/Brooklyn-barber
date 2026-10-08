@@ -385,7 +385,7 @@ if (isset($_SESSION['cliente_id'])) {
                 <?php if (isset($_SESSION['usuario_perfil']) && $_SESSION['usuario_perfil'] == 3): ?>
                     <li><a href="barbeiro_dashboard.php">Painel do Barbeiro</a></li>
                 <?php else: ?>
-                    <li><a href="agendamento.php">Meus Agendamentos</a></li>
+                    <li><a href="agendamento.php" class="active">Meus Agendamentos</a></li>
                 <?php endif; ?>
             </ul>
             <div class="nav-btns">
