@@ -11,9 +11,13 @@ if ($search !== '') {
     $params[':search'] = "%$search%";
 }
 
-$stmt = $pdo->prepare($query);
-$stmt->execute($params);
-$produtos = $stmt->fetchAll();
+try {
+    $stmt = $pdo->prepare($query);
+    $stmt->execute($params);
+    $produtos = $stmt->fetchAll();
+} catch (PDOException $e) {
+    die("Erro ao carregar produtos: " . $e->getMessage());
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
